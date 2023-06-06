@@ -23,13 +23,13 @@ PATCH http://localhost:8000/api/v1/products/Мандарин/
 Content-Type: application/json
 
 {
-  "description": "Самый лучший мандарин"
+  "description": "Самый лучший мандаринчиккк"
 }
 
 ###
 
 # 4. Удаление продукта
-DELETE http://localhost:8000/api/v1/products/1/
+DELETE http://localhost:8000/api/v1/products/Мандарин/
 Content-Type: application/json
 
 ###
@@ -45,10 +45,10 @@ POST http://localhost:8000/api/v1/stocks/
 Content-Type: application/json
 
 {
-  "address": "Склад17",
+  "address": "Склад2",
   "positions": [
     {
-      "product": 3,
+      "product": 4,
       "quantity": 1000,
       "price": 120.50
     }
@@ -64,8 +64,8 @@ Content-Type: application/json
 {
   "positions": [
     {
-      "product": 2,
-      "quantity": 100,
+      "product": 4,
+      "quantity": 1000,
       "price": 130.80
     }
   ]
