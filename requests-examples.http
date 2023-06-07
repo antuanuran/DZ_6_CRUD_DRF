@@ -11,7 +11,7 @@ POST http://localhost:8000/api/v1/products/
 Content-Type: application/json
 
 {
-  "title": "помидор5",
+  "title": "помидор",
   "description": "вкус похож на МАНДАРИН"
 }
 
@@ -45,12 +45,17 @@ POST http://localhost:8000/api/v1/stocks/
 Content-Type: application/json
 
 {
-  "address": "Склад2",
+  "address": "Склад1",
   "positions": [
     {
-      "product": 4,
+      "product": 1,
       "quantity": 1000,
       "price": 120.50
+    },
+    {
+      "product": 1,
+      "quantity": 100220,
+      "price": 9999
     }
   ]
 }
@@ -58,15 +63,21 @@ Content-Type: application/json
 ###
 
 # обновляем записи на складе
-PATCH http://localhost:8000/api/v1/stocks/2/
+PATCH http://localhost:8000/api/v1/stocks/1/
 Content-Type: application/json
 
 {
+  "address": "Склад333",
   "positions": [
     {
-      "product": 4,
+      "product": 2,
       "quantity": 1000,
-      "price": 130.80
+      "price": 120.50
+    },
+    {
+      "product": 2,
+      "quantity": 100220,
+      "price": 9999
     }
   ]
 }
@@ -74,5 +85,5 @@ Content-Type: application/json
 ###
 
 # поиск складов, где есть определенный продукт
-GET http://localhost:8000/api/v1/stocks/?products=4
-Content-Type: application/json
+GET http://localhost:8000/api/v1/stocks/
+
