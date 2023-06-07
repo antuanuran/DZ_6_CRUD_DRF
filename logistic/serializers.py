@@ -38,23 +38,12 @@ class StockSerializer(serializers.ModelSerializer):
         return stock
 
 
-
-
-
-
-
-
-
-
-
-
-
     def update(self, instance, validated_data):
         # достаем связанные данные для других таблиц
         positions = validated_data.pop('positions')
 
         # обновляем склад по его параметрам
-        stock = super().create(validated_data)
+        stock = super().update(instance, validated_data)
 
         # stock.products.all().delete()
         for pos in positions:
