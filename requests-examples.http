@@ -32,15 +32,22 @@ Content-Type: application/json
 DELETE http://localhost:8000/api/v1/products/Мандарин/
 Content-Type: application/json
 
+
+###
+# 5. Удаление склада
+DELETE http://localhost:8000/api/v1/stocks/26
+Content-Type: application/json
+
+
 ###
 
-# 5. Поиск продуктов по названию и описанию
+# 6. Поиск продуктов по названию и описанию
 GET http://localhost:8000/api/v1/products/?search=мандарин
 Content-Type: application/json
 
 ###
 
-# создание склада
+# 7. Создание склада
 POST http://localhost:8000/api/v1/stocks/
 Content-Type: application/json
 
@@ -62,7 +69,7 @@ Content-Type: application/json
 
 ###
 
-# обновляем записи на складе
+# 8. Обновляем записи на складе
 PATCH http://localhost:8000/api/v1/stocks/35/
 Content-Type: application/json
 
@@ -82,12 +89,7 @@ Content-Type: application/json
   ]
 }
 
-###
-
-# поиск складов, где есть определенный продукт
-GET http://localhost:8000/api/v1/stocks/
-
 
 ###
-# РЕЗУЛЬТАТ
-GET http://localhost:8000/api/v1/stocks/
+# 10. РЕЗУЛЬТАТ
+GET http://localhost:8000/api/v1/stocks/?page=4
